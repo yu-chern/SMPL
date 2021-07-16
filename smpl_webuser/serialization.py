@@ -85,6 +85,7 @@ def ready_arguments(fname_or_dict):
                 unpickler = pickle._Unpickler(f)
                 unpickler.encoding = 'latin1'
                 dd = unpickler.load()
+                f.close()
     else:
         dd = fname_or_dict
         
